@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - FHDStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d423a94438.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="../images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="../images/cart.png" width="30px" height="30px"></a>
+            <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+
+    </div>
+
+    <div class="p-form">
+        <div class="row">
+            <div class="col-75">
+              <div class="container">
+                <form action="/action_page.php">
+          
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Billing Address</h3>
+                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                      <input type="text" id="email" name="email" placeholder="john@example.com">
+                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                      <label for="city"><i class="fa fa-institution"></i> City</label>
+                      <input type="text" id="city" name="city" placeholder="New York">
+          
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="state">State</label>
+                          <input type="text" id="state" name="state" placeholder="NY">
+                        </div>
+                        <div class="col-50">
+                          <label for="zip">Zip</label>
+                          <input type="text" id="zip" name="zip" placeholder="10001">
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div class="col-50">
+                      <h3>Payment</h3>
+                      <label for="fname">Accepted Cards</label>
+                      <div class="icon-container">
+                        <i class="fab fa-cc-visa" style="color:navy;"></i>
+                        <i class="fab fa-cc-amazon-pay" style="color:gray;"></i>
+                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                        <i class="fab fa-cc-paypal" style="color:blue;"></i>
+                        <i class="fa-brands fa-google-pay" style="color:red;"></i>
+                      </div>
+                      <label for="cname">Name on Card</label>
+                      <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                      <label for="ccnum">Credit card number</label>
+                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                      <label for="expmonth">Exp Month</label>
+                      <input type="text" id="expmonth" name="expmonth" placeholder="September">
+          
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="expyear">Exp Year</label>
+                          <input type="text" id="expyear" name="expyear" placeholder="2018">
+                        </div>
+                        <div class="col-50">
+                          <label for="cvv">CVV</label>
+                          <input type="text" id="cvv" name="cvv" placeholder="352">
+                        </div>
+                      </div>
+                    </div>
+          
+                  </div>
+                  <label>
+                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                  </label>
+                  <input type="submit" value="Continue to checkout" class="btn">
+                </form>
+              </div>
+            </div>
+          
+            <div class="col-25">
+              <div class="container">
+                <h4>Cart
+                  <span class="price" style="color:black">
+                    <i class="fa fa-shopping-cart"></i>
+                    <b>3</b>
+                  </span>
+                </h4>
+                <p><a href="#">T-Shirt</a> <span class="price">$50</span></p>
+                <p><a href="#">Running Shoes</a> <span class="price">$55</span></p>
+                <p><a href="#">Jogger Pant 3</a> <span class="price">$70</span></p>
+                
+                <hr color="#ff523b" style="height: 3px; border-radius:6px; margin: 6px">
+                <p >Tax <span class="price" style="color : black"><b>$35</b></span></p>
+                <p>Total <span class="price" style="color:black"><b>$210</b></span></p>
+              </div>
+            </div>
+          </div>
+
+    </div>
+    
+
+
+
+    <!-- -------footer--- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our app</h3>
+                    <p>Download app for Android and IOS mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="../images/play-store.png">
+                        <img src="../images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../images/logo-white.png">
+                    <p>Our purpose is to sustainably make the pleasure and benefits of sports accessible to the
+                        many.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog post</li>
+                        <li>Return policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <!-- js for toggle menu -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            } else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        } 
+    </script>
+</body>
+
+</html>
