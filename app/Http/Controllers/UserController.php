@@ -84,6 +84,43 @@ class UserController extends Controller
 
         return view('user.single_category_products',compact('data','title','category'));
     }
+
+    public function searchProducts(Request $request){
+        
+     
+
+        if($request->title != "" && $request->title != NULL){
+            if($request->category != "" && $request->category != NULL){
+                $products = products::where('title','LIKE','%'.$request->title.'%')->Where('category','=',$request->category)->get();
+                return response()->json([
+    
+                    'products' => $products,
+                ]);
+            }
+
+            $products = products::where('title','LIKE','%'.$request->title.'%')->orWhere('category','LIKE','%'.$request->title.'%')->get();
+            return response()->json([
+
+                'products' => $products,
+            ]);
+        }
+       
+        if($request->category != "" && $request->category != NULL){
+            $products = products::where('category','=',$request->category)->get();
+            return response()->json([
+
+                'products' => $products,
+            ]);
+        }
+        
+        $products = products::all();
+        return response()->json([
+
+            'products' => $products,
+        ]);
+
+       
+    }
     //Cart
     public function cartPage(){
         return view('user.cart');

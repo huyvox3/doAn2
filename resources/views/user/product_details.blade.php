@@ -50,7 +50,17 @@
             </div>
             <div class="col-2">
                 <a href="{{ url('/') }}">Home/</a>
-                <a href="{{ url('/shirt') }}">Shirt</a>
+                @if ($product->category == 'Clothes')
+                    <a href="{{ url('/singe_category_products/Clothes') }}">Clothes</a>
+                @endif
+
+                @if ($product->category == 'Shoes')
+                     <a href="{{ url('/singe_category_products/Shoes') }}">Shoes</a>
+                 @endif
+
+                 @if ($product->category == 'Watch')
+                    <a href="{{ url('/singe_category_products/Watch') }}">Watch</a>
+                 @endif
                 <h1>{{ $product->title }}</h1>
                 <h4>${{ $product->price }}.00</h4>
                 @if ($product->category !='Watch')

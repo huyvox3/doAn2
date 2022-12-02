@@ -41,6 +41,7 @@ use App\Http\Controllers\AdminController;
     Route::get('/features_products',[UserController::class, 'featuresProducts']);
     Route::get('/latest_products',[UserController::class, 'latestProducts']);
     Route::get('/singe_category_products/{category}',[UserController::class, 'singeCategory']);
+    Route::get('/searchProducts',[UserController::class, 'searchProducts']);
     // Cart
     Route::get('/cart_page',[UserController::class, 'cartPage']);
     Route::post('/add_to_cart',[UserController::class,'addToCart']); 

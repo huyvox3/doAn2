@@ -35,10 +35,7 @@
                            
                             {{-- <input type="text" class ="name"name = "name" placeholder="Enter the category name">
                             <button type="submit" class="btn btn-primary add_category" name="submit">Add</button> --}}
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-                             Add Category
-                            </button>
-                            
+                          
                             <!-- Modal -->
 
                             <div style="color:#7DBDBD !important" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
