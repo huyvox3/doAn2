@@ -48,6 +48,7 @@ use App\Http\Controllers\AdminController;
     Route::get('/count_cart',[UserController::class, 'countCart']);
     Route::get('/cart_info',[UserController::class, 'cartInfo']);
     Route::get('/remove_cartItem',[UserController::class, 'removeCartItem']);
+    Route::get('/updateCart',[UserController::class, 'updateCart']);
     //Orders
     Route::get('/orders',[UserController::class, 'viewOrder'])->name('orders');
     Route::get('/order_details',[UserController::class, 'orderDetails']);

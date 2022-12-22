@@ -123,7 +123,7 @@
                             $('.body').append("<tr>\
                                     <td>\
                                         <div class='cart-info'>\
-                                            <a href='{{  url('product_details',"+item.productID+") }}'><img src='"+item.img+ " '></a><br>\
+                                            <a href='  http://127.0.0.1:8000/product_details/"+item.productID+" '><img src='"+item.img+ " '></a><br>\
                                            <div>\
                                             <p>"+item.product_title+"</p>\
                                             <small>Price: $"+item.price+".00</small>\

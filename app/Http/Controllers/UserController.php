@@ -238,6 +238,34 @@ class UserController extends Controller
         ]);
     }
 
+    public function updateCart(Request $request){
+        $validator = Validator::make($request->all(),[
+            'productsID'=>'required',
+       ]);  
+       if($validator->fails()){
+        return response()->json([
+            'message'=>$validator->messages(), 
+        ]);
+
+        if($request->size != null){
+            $product = cart::where('userID','=',Auth::user()->id)->where('productID','=',$request->input('productsID'))->where('size','=',$request->size)->first();
+
+            $product->delete();
+            return response()->json([
+                'message'=>'Success',
+            ]);
+       }
+
+        $product = cart::where('userID','=',Auth::user()->id)->where('productID','=',$request->input('productsID'))->first();
+    
+        $product->delete();
+
+        return response()->json([
+            'message'=>'Success',
+        ]);
+   }
+    }
+
     //Payment
     public function createpaypal(){
         $cart = cart::where('userID','=' ,Auth::user()->id)->get();

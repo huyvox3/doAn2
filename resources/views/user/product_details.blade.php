@@ -143,10 +143,10 @@
                     $('.related-products').html('');
                    console.log(response.products);
                    $.each(response.products, function(key,item){
-                    
+                        var thumbnail = item.image.split('|','1');
                         $('.related-products').append('<div class="col-4">\
                         \
-                         <img  src="'+item.image+'">\
+                         <img  src="'+thumbnail+'">\
                      \
                         <a href ="http://127.0.0.1:8000/product_details/'+item.id+'"><h4 ">'+item.title+'</h4></a>    \
                       \
