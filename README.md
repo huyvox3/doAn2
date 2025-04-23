@@ -106,7 +106,7 @@ vendor/bin/phpunit
 
 ## 📄 License
 
-> This project does not include a license. All rights are reserved by the author.
+> This project is licensed under the MIT License.
 
 ---
 
